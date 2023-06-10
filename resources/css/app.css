@@ -1,0 +1,37 @@
+.container {
+    background-color: #f1f6f9;
+}
+
+.card {
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #f1f6f9;
+}
+
+.content {
+    padding: 10px 115px 10px 115px;
+    background-color: #ffff;
+    box-shadow: 2px 2px 4px #b6b6b6;
+    border-radius: 20px;
+}
+
+.content-3 {
+    padding: 10px 175px 10px 175px;
+    background-color: #ffff;
+    box-shadow: 2px 2px 4px #b6b6b6;
+    border-radius: 20px;
+}
+
+.water-level {
+    font-size: 75px;
+    font-weight: 900;
+}
+
+.content-4 {
+    padding: 10px 255px 10px 255px;
+    background-color: #ffff;
+    box-shadow: 2px 2px 4px #b6b6b6;
+    border-radius: 20px;
+}
