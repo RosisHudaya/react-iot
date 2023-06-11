@@ -8,7 +8,7 @@ function ExampleComponent() {
         fetchData();
 
         // Setup polling interval
-        const interval = setInterval(fetchData, 1000); // Mengambil data setiap 5 detik
+        const interval = setInterval(fetchData, 1000);
 
         // Clean up interval on component unmount
         return () => clearInterval(interval);
@@ -16,7 +16,7 @@ function ExampleComponent() {
 
     const fetchData = () => {
         axios
-            .get("http://192.168.1.14:8000/api/bacajarak")
+            .get("http://192.168.119.149:8000/api/bacajarak")
             .then((response) => {
                 const data = response.data;
                 console.log(data); // Data yang berhasil diambil
@@ -37,7 +37,7 @@ function ExampleComponent() {
 
     return (
         <div className="container">
-            <div>
+            <div className="dash">
                 <h1>DASHBOARD</h1>
             </div>
             <div className="card">

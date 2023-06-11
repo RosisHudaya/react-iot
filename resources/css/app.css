@@ -1,9 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins&display=swap");
+
+:root {
+    --main-font: "Poppins";
+    --heading-font: "Open Sans", "sans-serif";
+}
+
+* {
+    font-family: var(--main-font);
+}
+
 .container {
     background-color: #f1f6f9;
 }
 
+.dash {
+    background-color: #537188;
+    color: #ffff;
+    font-weight: 800;
+    line-height: 72px;
+    padding-left: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 2px 2px 4px #b6b6b6;
+}
+
 .card {
-    padding-top: 24px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -18,20 +40,41 @@
 }
 
 .content-3 {
-    padding: 10px 175px 10px 175px;
+    padding: 10px 138px 10px 138px;
     background-color: #ffff;
     box-shadow: 2px 2px 4px #b6b6b6;
     border-radius: 20px;
+    text-align: center;
 }
 
-.water-level {
-    font-size: 75px;
+.content-3 p {
+    font-size: 3rem;
     font-weight: 900;
 }
 
 .content-4 {
-    padding: 10px 255px 10px 255px;
+    padding: 10px 300px 10px 300px;
     background-color: #ffff;
     box-shadow: 2px 2px 4px #b6b6b6;
     border-radius: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content,
+    .content-3,
+    .content-4 {
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .content-4 {
+        padding: 10px;
+    }
 }
