@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import WaterLevel from "./WaterLevel";
+import PumpIndicator from "./PumpIndicator";
+import BuzzerIndicator from "./BuzzerIndicator";
+import WaterLevelHistory from "./WaterLevelHistory";
+import WaterLevelIndicator from "./WaterLevelIndicator";
 
-function ExampleComponent() {
+function Dashboard() {
     const [waterLevel, setWaterLevel] = useState(null);
 
     useEffect(() => {
@@ -16,7 +21,7 @@ function ExampleComponent() {
 
     const fetchData = () => {
         axios
-            .get("http://192.168.119.149:8000/api/bacajarak")
+            .get("http://192.168.119.45:8000/api/bacajarak")
             .then((response) => {
                 const data = response.data;
                 console.log(data); // Data yang berhasil diambil
@@ -41,40 +46,16 @@ function ExampleComponent() {
                 <h1>DASHBOARD</h1>
             </div>
             <div className="card">
-                <div className="content">
-                    <h3>Water Level Indicator</h3>
-                    <p>Full</p>
-                    <p>Medium</p>
-                    <p>Empty</p>
-                </div>
-                <div className="content">
-                    <h3>Pump Indicator</h3>
-                    <p>ON</p>
-                    <p>OFF</p>
-                </div>
-                <div className="content">
-                    <h3>Buzzer Indicator</h3>
-                    <p>ON</p>
-                    <p>OFF</p>
-                </div>
+                <WaterLevelIndicator />
+                <PumpIndicator />
+                <BuzzerIndicator />
             </div>
-
             <div className="card">
-                <div className="content-3">
-                    <h3>Buzzer Indicator</h3>
-                    <p className="water-level">
-                        {waterLevel !== null
-                            ? waterLevel.join(", ")
-                            : "Loading..."}
-                    </p>
-                </div>
-                <div className="content-4">
-                    <h3>Water Level History</h3>
-                    <p></p>
-                </div>
+                <WaterLevel waterLevel={waterLevel} />
+                <WaterLevelHistory waterLevel={waterLevel} />
             </div>
         </div>
     );
 }
 
-export default ExampleComponent;
+export default Dashboard;

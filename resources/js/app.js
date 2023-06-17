@@ -1,5 +1,5 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import ExampleComponent from "./components/ExampleComponent";
+import Dashboard from "./components/Dashboard";
 
-createRoot(document.getElementById("app")).render(<ExampleComponent />);
+createRoot(document.getElementById("app")).render(<Dashboard />);

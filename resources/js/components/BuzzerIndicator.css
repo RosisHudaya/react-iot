@@ -1,0 +1,20 @@
+.circleBuzzer {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: hsl(0, 0%, 80%);
+}
+
+.on {
+    background-color: green;
+}
+
+.off {
+    background-color: red;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
